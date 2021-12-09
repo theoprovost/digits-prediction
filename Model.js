@@ -10,7 +10,7 @@ class Model {
     }
 
     async loadModel() {
-        const _path = path.resolve('../CNN/CNN_JS/model.json')
+        const _path = process.env.MODEL_PATH || path.resolve('../CNN/CNN_JS/model.json')
         return await tf.loadLayersModel('file://' + _path)
     }
 }
