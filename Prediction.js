@@ -31,7 +31,7 @@ class Prediction {
     }
 
     getDatum(image_index) {
-        const _path = path.resolve('../data/test.csv')
+        const _path = path.resolve(process.env.DATA_PATH) || path.resolve('../data/test.csv')
 
         return new Promise(function (resolve, _) {
             fs.createReadStream(_path)
