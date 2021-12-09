@@ -8,7 +8,7 @@ const express = require('express')
 
 const app = express()
 const router = require('./router')
-const port = 3000
+const port = process.env.PORT || 5000
 
 // Local static assets access
 app.use(express.static(__dirname + '/assets'));
@@ -21,7 +21,7 @@ app.use(express.json({ limit: '50mb', extended: true }))
 app.use(router)
 
 app.listen(port, () => {
-    console.log(`Server is listening on http://localhost:${port}`)
+    console.log(`[LOCAL] Server is listening on http://localhost:${port}`)
 });
 
 // NB : DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process
