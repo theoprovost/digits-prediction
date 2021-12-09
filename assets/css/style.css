@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#stats_btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+
+.main_container {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas {
+    border: 1px solid #000;
+}
+
+#canvas_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 70px;
+    width: 100%;
+}
+
+#canvas_btn > button {
+    margin-right: 15px;
+}
+
+#stats_table {
+    width: 70vw;
+    height: 90vh;
+}
+
+#user_prediction_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.expand {
+    width: 100% !important;
+}
+
+#pred_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=checkbox]:after {
+  content: " ";
+  background-color: #000 !important;
+  display: inline-block;
+  visibility: visible;
+ }
+
+
+.form-check-input:before, .form-check-input:checked {
+    background-color: #000 !important;
+}
