@@ -177,9 +177,6 @@ function handleCanvas() {
         tool_type = canvas_switch_tool_btn.value
     })
 
-    console.log(empty_canvas)
-
-
     //Mousedown
     canvas.addEventListener('mousedown', e => {
         last_mouse_x = mouse_x = parseInt(e.clientX - canvas_x)

@@ -13,13 +13,21 @@ body {
     height: 100vh;
 }
 
-#stats_btn {
+#stats_btn, #return_btn {
     position: absolute;
-    right: 30px;
-    top: 30px;
     font-size: 1.5rem;
     border: none;
     background-color: transparent;
+}
+
+#stats_btn {
+    right: 30px;
+    top: 30px;
+}
+
+#return_btn {
+    left: 30px;
+    top: 30px;
 }
 
 
@@ -29,11 +37,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow:scroll;
 }
 
-#canvas {
-    border: 1px solid #000;
-}
 
 #canvas_btn {
     display: flex;
@@ -78,7 +84,13 @@ input[type=checkbox]:after {
   visibility: visible;
  }
 
-
 .form-check-input:before, .form-check-input:checked {
     background-color: #000 !important;
+}
+
+#return_btn {
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
 }

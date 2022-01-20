@@ -15,7 +15,7 @@ const apiController = {
         const user_pred = req.body.prediction.user_pred
 
         // Check is the user prediction is a valid one
-        if (user_pred in [1, 0, -1]) {
+        if (user_pred in [0, 1] || user_pred == -1) {
             const history = req.body
             history.prediction.pred_correct = history.prediction.y_pred == history.prediction.user_pred ? true : false
 

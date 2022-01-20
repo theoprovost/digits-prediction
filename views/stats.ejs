@@ -1,17 +1,22 @@
 <%- include('partials/head'); %>
 
+<button id='return_btn'>⬅️</button>
+
+<% if(data){ %>
+
 <table class="table" id="stats_table">
     <thead>
         <tr>
-            <td>ID</td>
+            <td>Prediction type</td>
             <td>Predicted value</td>
-            <td>Actual value</td>
+            <td>Prediction status</td>
         </tr>
     </thead>
     <tbody>
+
         <% data.forEach((history) => { %>
         <tr>
-            <td> <%= history.id %> </td>
+            <td> <%= history.record.prediction.pred_type %> </td>
             <td> <%= history.record.prediction.y_pred %> </td>
 
             <% if(history.record.prediction.user_pred == '1'){ %>
@@ -25,10 +30,18 @@
             <% if (history.record.prediction.user_pred == '-1') { %>
             <td> Unknown status </td>
             <% } %>
-
         </tr>
-        <% }); %>
+        <% }) %>
     </tbody>
 </table>
+
+<% } else {  %>
+
+<p>There is no history yet 🙃</p>
+
+<% } %>
+
+
+
 
 <%- include('partials/footer', {js: 'stats'}); %>
